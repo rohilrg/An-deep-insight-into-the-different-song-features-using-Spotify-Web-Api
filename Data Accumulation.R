@@ -48,9 +48,14 @@ Serge_Gainsbourg <- get_artist_audio_features('Serge Gainsbourg')
 Serge_Gainsbourg$artist_name <- "Serge Gainsbourg"
 Beyonce <- get_artist_audio_features('Beyonce')
 Beyonce$artist_name <- "Beyonce"
-
+Enrique <- get_artist_audio_features('Enrique')
+Enrique$artist_name <- "Enrique Iglesias"
+Queen <- get_artist_audio_features('Queen')
+Queen$artist_name <- "Queen"
+Kumar_Sanu <- get_artist_audio_features('Kumar Sanu')
+Kumar_Sanu$artist_name <- "Kumar Sanu"
 #Combining the Dataset
 combined_dataset <- rbind(eminem,pink_floyd,aerosimth,dr_dre,two_pac, highlight_tribe, Rihanna, DAFT_punk, Johnny_Cash,
                           John_Denver, Tim_MCGRAW, Don_Willams,Kis_KUm, Bryan_Adams, Edith_Piaf, Skrillex,
-                          Kendrick_Lamar, Miles_Davis, Cab_Calloway, Serge_Gainsbourg, Beyonce) 
+                          Kendrick_Lamar, Miles_Davis, Cab_Calloway, Serge_Gainsbourg, Beyonce, Enrique, Queen, Kumar_Sanu) 
 write.csv(combined_dataset, "Music_Dataset.csv")
