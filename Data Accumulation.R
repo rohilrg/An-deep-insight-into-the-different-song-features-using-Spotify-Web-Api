@@ -1,6 +1,6 @@
 library(spotifyr)
-Sys.setenv(SPOTIFY_CLIENT_ID = '11b14895fc68448fa99a4053bd63cb45')
-Sys.setenv(SPOTIFY_CLIENT_SECRET = 'ccecb7c787c3407ca56f54d4f1409c95')
+Sys.setenv(SPOTIFY_CLIENT_ID = '')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '')
 access_token <- get_spotify_access_token(client_id = Sys.getenv('SPOTIFY_CLIENT_ID'), client_secret = Sys.getenv('SPOTIFY_CLIENT_SECRET'))
 
 ##Accumulation of Data
