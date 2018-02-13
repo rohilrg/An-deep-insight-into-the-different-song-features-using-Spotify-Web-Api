@@ -74,10 +74,15 @@ Jimi_Hendrix <- get_artist_audio_features('Jimi Hendrix')
 Jimi_Hendrix$artist_name <- "Jimi Hendrix"
 Vicente_Fernandez <- get_artist_audio_features('Vicente Fernandez')
 Vicente_Fernandez$artist_name <- "Vicente Fernandez"
+KK <- get_artist_audio_features('KK')
+KK$artist_name <- "KK"
+Bon_Jovi <- get_artist_audio_features('Bon Jovi')
+Bon_Jovi$artist_name <- "Bon Jovi"
+
 #Combining the Dataset
 combined_dataset <- rbind(eminem,pink_floyd,aerosimth,dr_dre,two_pac, highlight_tribe, Rihanna, DAFT_punk, Johnny_Cash,
                           John_Denver, Tim_MCGRAW, Don_Willams,Kis_KUm, Bryan_Adams, Edith_Piaf, Skrillex,
                           Kendrick_Lamar, Miles_Davis, Cab_Calloway, Serge_Gainsbourg, Beyonce, Enrique, Queen, 
                           Kumar_Sanu, Radiohead, Alizee, Don_Mclean, Eric_Clapton, Sezen_Aksu, Black_Sabbath
-                          ,U_two, Beatles, Jimi_Hendrix, Vicente_Fernandez) 
+                          ,U_two, Beatles, Jimi_Hendrix, Vicente_Fernandez, KK, Bon_Jovi) 
 write.csv(combined_dataset, "Music_Dataset.csv")
