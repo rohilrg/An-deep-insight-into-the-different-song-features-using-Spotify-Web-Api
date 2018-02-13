@@ -54,8 +54,18 @@ Queen <- get_artist_audio_features('Queen')
 Queen$artist_name <- "Queen"
 Kumar_Sanu <- get_artist_audio_features('Kumar Sanu')
 Kumar_Sanu$artist_name <- "Kumar Sanu"
+Radiohead <- get_artist_audio_features('Radiohead')
+Radiohead$artist_name <- "Radiohead"
+Alizee <- get_artist_audio_features('Alizee')
+Alizee$artist_name <- "Alizée"
+Eric_Clapton <- get_artist_audio_features('Eric Clapton')
+Eric_Clapton$artist_name <- "Eric Clapton"
+Don_Mclean <- get_artist_audio_features('Don McLean')
+Don_Mclean$artist_name <- "Don McLean"
+
 #Combining the Dataset
 combined_dataset <- rbind(eminem,pink_floyd,aerosimth,dr_dre,two_pac, highlight_tribe, Rihanna, DAFT_punk, Johnny_Cash,
                           John_Denver, Tim_MCGRAW, Don_Willams,Kis_KUm, Bryan_Adams, Edith_Piaf, Skrillex,
-                          Kendrick_Lamar, Miles_Davis, Cab_Calloway, Serge_Gainsbourg, Beyonce, Enrique, Queen, Kumar_Sanu) 
+                          Kendrick_Lamar, Miles_Davis, Cab_Calloway, Serge_Gainsbourg, Beyonce, Enrique, Queen, 
+                          Kumar_Sanu, Radiohead, Alizee, Don_Mclean, Eric_Clapton) 
 write.csv(combined_dataset, "Music_Dataset.csv")
