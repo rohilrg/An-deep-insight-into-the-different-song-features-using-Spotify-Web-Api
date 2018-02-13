@@ -62,10 +62,18 @@ Eric_Clapton <- get_artist_audio_features('Eric Clapton')
 Eric_Clapton$artist_name <- "Eric Clapton"
 Don_Mclean <- get_artist_audio_features('Don McLean')
 Don_Mclean$artist_name <- "Don McLean"
-
+Sezen_Aksu <- get_artist_audio_features('Sezen Aksu')
+Sezen_Aksu$artist_name <- "Sezen Aksu"
+Black_Sabbath <- get_artist_audio_features('Black Sabbath')
+Black_Sabbath$artist_name <- "Black Sabbath"
+U_two <- get_artist_audio_features('U2')
+U_two$artist_name <- "U2"
+Beatles <- get_artist_audio_features('The Beatles')
+Beatles$artist_name <- "The Beatles"
 #Combining the Dataset
 combined_dataset <- rbind(eminem,pink_floyd,aerosimth,dr_dre,two_pac, highlight_tribe, Rihanna, DAFT_punk, Johnny_Cash,
                           John_Denver, Tim_MCGRAW, Don_Willams,Kis_KUm, Bryan_Adams, Edith_Piaf, Skrillex,
                           Kendrick_Lamar, Miles_Davis, Cab_Calloway, Serge_Gainsbourg, Beyonce, Enrique, Queen, 
-                          Kumar_Sanu, Radiohead, Alizee, Don_Mclean, Eric_Clapton) 
+                          Kumar_Sanu, Radiohead, Alizee, Don_Mclean, Eric_Clapton, Sezen_Aksu, Black_Sabbath
+                          ,U_two, Beatles) 
 write.csv(combined_dataset, "Music_Dataset.csv")
