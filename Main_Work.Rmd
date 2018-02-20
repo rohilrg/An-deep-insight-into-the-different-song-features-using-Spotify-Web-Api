@@ -5,5 +5,6 @@ output: html_notebook
 
 ```{r}
 md <- combined_dataset
+plot(combined_dataset$energy, combined_dataset$valence)
 ```
 
