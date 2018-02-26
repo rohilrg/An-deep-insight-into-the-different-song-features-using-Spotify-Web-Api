@@ -9,7 +9,12 @@ barplot(m, axes = TRUE, beside = TRUE)
 #According to the correlation plot shows Danceablity> Energy> Loudness> Tempo> Speechiness
 #with Valence.So these attributes can be used to predict the right music for a given track with most coherent valence with song.
 
-most_cor_attributes <- cbind(combined_dataset$artist_name,combined_dataset$loudness, combined_dataset$energy, combined_dataset$tempo, combined_dataset$danceability, combined_dataset$speechiness, combined_dataset$valence)
-colnames(most_cor_attributes) <- c("Artist Name","Loudness", "Energy", "Tempo", "Danceability", "Speechiness", "Valence")
+most_cor_attributes <- cbind(combined_dataset$artist_name,combined_dataset$track_name,combined_dataset$loudness, combined_dataset$energy, combined_dataset$tempo, combined_dataset$danceability, combined_dataset$speechiness, combined_dataset$valence)
+colnames(most_cor_attributes) <- c("Artist Name","Track Name","Loudness", "Energy", "Tempo", "Danceability", "Speechiness", "Valence")
 
 library(h2o)
+h2o.init()
+split_data <- h2o.splitFrame(data=most_cor_attributes, ratios = 0.75)
+
+training_data <- split_data[[1]]
+test_data <- split_data[[2]]
