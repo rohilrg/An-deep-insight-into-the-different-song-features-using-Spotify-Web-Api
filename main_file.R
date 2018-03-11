@@ -14,6 +14,9 @@ combined_dataset$mode_b <- factor(combined_dataset$mode_b)
 usefull_features <- cbind(combined_dataset$loudness, combined_dataset$energy, combined_dataset$tempo, combined_dataset$liveness,combined_dataset$danceability, combined_dataset$speechiness, combined_dataset$instrumentalness,combined_dataset$acousticness, combined_dataset$track_popularity, combined_dataset$album_popularity, combined_dataset$mode_b)
 colnames(usefull_features)<- c("Loudness", "Energy", "Tempo","Liveness", "Danceability", "Speechiness","Instrumentalness", "Accousticness", "Track_Popularity", "Album Popularity", 'Mode')
 
+filtered_Data<- cbind(combined_dataset$artist_name,combined_dataset$track_name,combined_dataset$loudness, combined_dataset$energy,combined_dataset$danceability, combined_dataset$speechiness, combined_dataset$valence_b)
+colnames(filtered_Data)<- c("Artist Name","Track Name","Loudness","Energy", "Danceability", "Speechiness","Valence")
+m<-data.frame(filtered_Data)
 
 
 ##----------------------Removing Redundant Features##############_________
@@ -46,7 +49,6 @@ print(importance)
 # plot importance
 plot(importance)
 
-
 #### I also used the random forest technique to  find the importance of the each feature.
 
 # define the control using a random forest selection function
@@ -59,3 +61,33 @@ print(results)
 predictors(results)
 # plot the results
 plot(results, type=c("g", "o"))
+
+
+## So according to the above analysis we can deduce that Danceablity> Energy> Speechiness
+## >Loudness>Album Popularity ar ethe features that can be used for predicting the correct value of valency
+
+library(ISLR)
+attach(m)
+smp_siz = floor(0.70*nrow(m)) 
+smp_siz
+set.seed(123)   # set seed to ensure you always have same random numbers generated
+train_ind = sample(seq_len(nrow(m)),size = smp_siz)  # Randomly identifies therows equal to sample size ( defined in previous instruction) from  all the rows of Smarket dataset and stores the row number in train_ind
+train =m[train_ind,] #creates the training dataset with row numbers stored in train_ind
+test=m[-train_ind,]  # creates the test dataset excludin
+
+##########
+
+##Training the ANN model and making 
+
+
+
+
+
+
+
+
+
+
+
+
+
