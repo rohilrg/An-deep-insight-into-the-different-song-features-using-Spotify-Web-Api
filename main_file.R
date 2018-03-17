@@ -50,8 +50,7 @@ print(importance)
 plot(importance)
 
 #### I also used the random forest technique to  find the importance of the each feature.
-
-# define the control using a random forest selection function
+ing a random forest selection function
 control <- rfeControl(functions=rfFuncs, method="cv", number=10)
 # run the RFE algorithm
 results <- rfe(usefull_features_after_process, combined_dataset$valence_b, sizes=c(1:10), rfeControl=control)
@@ -61,6 +60,7 @@ print(results)
 predictors(results)
 # plot the results
 plot(results, type=c("g", "o"))
+# define the control us
 
 
 ## So according to the above analysis we can deduce that Danceablity> Energy> Speechiness
@@ -75,9 +75,6 @@ train_ind = sample(seq_len(nrow(m)),size = smp_siz)  # Randomly identifies thero
 train =m[train_ind,] #creates the training dataset with row numbers stored in train_ind
 test=m[-train_ind,]  # creates the test dataset excludin
 
-##########
-
-##Training the ANN model and making 
 
 
 
